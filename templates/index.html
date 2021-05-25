@@ -1,0 +1,11 @@
+<h1>Recipe Box</h1>
+<h2>Welcome to Recipe Box!</h2>
+
+
+<ul>
+{%for recipe in recipe_view %}
+        <li><a href="/recipe/{{ recipe.id }}">{{ recipe.title }}</a></li>
+    {% endfor %}
+</ul>
+
+
