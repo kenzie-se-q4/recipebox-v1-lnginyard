@@ -1,6 +1,6 @@
 from django.db import models
 from django.utils import timezone
-
+from django.contrib.auth import authenticate
 
 # Create your models here.
 """
@@ -28,7 +28,7 @@ class Recipe(models.Model):
     title = models.CharField(max_length=50)
     author = models.ForeignKey(Author, on_delete=models.CASCADE, null=True)
     description = models.TextField()
-    time_required = models.CharField(max_length=30)
+    cook_time = models.DateTimeField(default=timezone.now)
     instructions = models.TextField()
 
     def __str__(self):
