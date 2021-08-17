@@ -1,11 +1,14 @@
-<h1>Recipe Box</h1>
-<h2>Welcome to Recipe Box!</h2>
+<h1> {{ posts }} </h1>
 
+<h3>Hello my Fellow #Foodies!</h3>
+<h2>Welcome to my Recipe Box!</h2>
 
 <ul>
-{%for recipe in recipe_view %}
-        <li><a href="/recipe/{{ recipe.id }}">{{ recipe.title }}</a></li>
+        {% for recipe in recipes %}
+
+    <li>
+        < href="/recipe/{{ recipe.id }}/"</a>
+        -- by <a href="/author/{{ author.id }}/"</a>
+        </li>
     {% endfor %}
 </ul>
-
-
