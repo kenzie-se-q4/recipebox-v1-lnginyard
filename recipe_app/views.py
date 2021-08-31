@@ -5,11 +5,9 @@ from django.http import HttpResponseRedirect
 from recipe_app.forms import AuthorForm, RecipeForm
 
 
-
 def index(request):
         recipe_view = Recipe.objects.all()
         return render(request, 'index.html', {'recipe': recipe_view})
-
 
 def add_author(request):
         form = AuthorForm(request.POST, request.FILES)
