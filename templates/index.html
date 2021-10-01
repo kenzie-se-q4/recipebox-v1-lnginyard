@@ -4,10 +4,10 @@
 <h2>Welcome to my Recipe Box!</h2>
 
 <ul>
-        {% for recipe in recipes %}
+        {% for recipes in recipes %}
 
     <li>
-        < href="/recipe/{{ recipe.id }}/"</a>
+        <a href="/recipe/{{ recipe.id }}/"</a>
         -- by <a href="/author/{{ author.id }}/"</a>
         </li>
     {% endfor %}
