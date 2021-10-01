@@ -2,13 +2,15 @@
 
 <h3>Hello my Fellow #Foodies!</h3>
 <h2>Welcome to my Recipe Box!</h2>
-
+<div>  <a href ="/add_author/"> Click here to add an author!</a>
+<a href ="/add_recipe/">Click here to add a recipe!</a>
+<a href="/logout/">Logout</a></div>
 <ul>
         {% for recipe in recipes %}
 
     <li>
-        < href="/recipe/{{ recipe.id }}/"</a>
-        -- by <a href="/author/{{ author.id }}/"</a>
+        <a href ="/recipes/{{ recipe.id }}/"> {{ recipe.title }}</a>
+    --by <a href = "/auth_deets/{{ recipe.author.id }}/">{{ recipe.author }}</a>
         </li>
     {% endfor %}
 </ul>
