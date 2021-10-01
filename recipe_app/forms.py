@@ -17,3 +17,8 @@ class RecipeForm(forms.Form):
     author = forms.ModelChoiceField(queryset=Author.objects.all())
     cook_time = forms.CharField(max_length=25)
     instructions = forms.CharField(widget=forms.Textarea)
+
+
+class LoginForm(forms.Form):
+    username = forms.CharField(max_length=150)
+    password = forms.CharField(widget=forms.PasswordInput)
