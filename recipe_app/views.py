@@ -5,6 +5,7 @@ from django.contrib.auth.decorators import login_required
 from django.contrib.auth import login, authenticate, logout
 from django.contrib.auth.models import User
 from django.contrib.admin.views.decorators import staff_member_required
+from django.contrib import messages
 
 
 def index(request):
@@ -80,5 +81,9 @@ def login_view(request):
 
 
 def logout_view(request):
+    html = "logout_view.html"
     logout(request)
+    messages.info(request, "Sad to see you go")
     return HttpResponseRedirect(reverse('Home'))
+
+
