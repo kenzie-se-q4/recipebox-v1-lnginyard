@@ -7,7 +7,6 @@ def index(request):
     recipe_view = Recipe.objects.all()
     return render(request, 'index.html', {'recipes': recipe_view})
 
-
 def add_author(request):
     form = AuthorForm(request.POST, request.FILES)
     return render(request, 'author.html', {'form': form})
