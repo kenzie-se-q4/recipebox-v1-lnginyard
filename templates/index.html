@@ -1,13 +1,10 @@
-
-By <a href="/author/{{ recipe.author.id }}
-
-<h2> {{ posts }} </h2>
-
 <h3>Hello my Fellow #Foodies!</h3>
 <h2>Welcome to my Recipe Box!</h2>
-<div>  <a href ="/add_author/"> Click here to add an author!</a>
-<a href ="/add_recipe/">Click here to add a recipe!</a>
-<a href="/logout/">Logout</a></div>
+<div>
+    <button><a href ="/add_author/"> Click here to add an author!</a></button>
+    <button><a href ="/add_recipe/">Click here to add a recipe!</a></button>
+    <button><a href="/logout/">Logout</a></button>
+</div>
 <ul>
         {% for recipe in recipes %}
 
