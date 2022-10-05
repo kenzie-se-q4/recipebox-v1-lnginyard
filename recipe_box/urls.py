@@ -20,9 +20,11 @@ from recipe_app import views
 
 urlpatterns = [
     path('', views.index, name='Home'),
-    path('r^$recipe/<int:recipe_id>/', views.recipe_detail, name='recipe_detail'),
-    path('auth_deets/<int:author_id>/', views.auth_deets, name='author_detail'),
+    path('recipes/<int:id>/', views.recipe_detail, name='recipe_detail'),
+    path('auth_deets/<int:id>/', views.auth_deets, name='author_detail'),
     path('admin/', admin.site.urls),
     path('add_author/', views.add_author, name='add_author'),
     path('add_recipe/', views.add_recipe, name='add_recipe'),
+    path('login/', views.login_view),
+    path('logout/', views.logout_view),
 ]

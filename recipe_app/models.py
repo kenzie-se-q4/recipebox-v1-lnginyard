@@ -19,7 +19,7 @@ Recipe:
 
 class Author(models.Model):
     name = models.CharField(max_length=50)
-    bio = models.TextField()
+    bio = models.TextField('', null=True, blank=True)
     user = models.OneToOneField(User, on_delete=models.CASCADE)
 
     def __str__(self):
@@ -31,7 +31,7 @@ class Recipe(models.Model):
     author = models.ForeignKey(Author, on_delete=models.CASCADE, null=True)
     description = models.TextField()
     cook_time = models.CharField(max_length=25)
-    instructions = models.TextField()
+    instructions = models.TextField(max_length=500)
 
     def __str__(self):
         return self.title

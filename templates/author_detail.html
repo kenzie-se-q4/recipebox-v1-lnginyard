@@ -1,0 +1,15 @@
+<p>{{ author.name }}</p>
+<p>{{ author.bio }}</p>
+
+<ul>
+{% for recipe in recipe %}
+        <li>
+            <a href="/recipes/{{ recipe.id }}/">{{ recipe.title }}</a>
+        </li>
+    {% endfor %}
+</ul>
+
+<form action="" method="post">
+    {% csrf_token %} {{ form.as_p }}
+    <button><a href="/"> Cancel </a></button>
+</form>

@@ -1,0 +1,12 @@
+<ul>
+    <li>{{recipe.title}}</li>
+    <li><a href="/auth_deets/{{recipe.author.id}}">{{recipe.author}}</a></li>
+    <li>{{recipe.cook_time}}</li>
+    <li>{{recipe.instructions}}</li>
+    <li>{{recipe.description}}</li>
+</ul>
+
+<form action="" method="post">
+    {% csrf_token %} {{ form.as_p }}
+    <button><a href="/"> Cancel </a></button>
+</form>
