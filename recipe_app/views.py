@@ -48,8 +48,7 @@ def add_recipe(request):
         return HttpResponseRedirect(reverse("Home"))
     form = RecipeForm()
     return render(request, "add_recipe.html", {"form": form})
-
-
+  
 def recipe_detail(request, id):
     recipe = Recipe.objects.get(id=id)
     return render(request, 'recipe_detail.html', {'recipe': recipe})
@@ -85,5 +84,4 @@ def logout_view(request):
     logout(request)
     messages.info(request, "Sad to see you go")
     return HttpResponseRedirect(reverse('Home'))
-
 
