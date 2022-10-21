@@ -1,0 +1,17 @@
+<h3>Hello my Fellow #Foodies!</h3>
+<h2>Welcome to my Recipe Box!</h2>
+<div>
+    <button><a href ="/add_author/"> Click here to add an author!</a></button>
+    <button><a href ="/add_recipe/">Click here to add a recipe!</a></button>
+    <button><a href="/login/"> Login </a></button>
+    <button><a href="/logout/">Logout</a></button>
+</div>
+<ul>
+        {% for recipe in recipes %}
+
+    <li>
+        <a href ="/recipes/{{ recipe.id }}/"> {{ recipe.title }}</a>
+    --by <a href = "/auth_deets/{{ recipe.author.id }}/">{{ recipe.author }}</a>
+        </li>
+    {% endfor %}
+</ul>
